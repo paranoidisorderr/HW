@@ -1,35 +1,31 @@
 package homework7;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+
+import java.text.SimpleDateFormat;
+import java.text.spi.DateFormatProvider;
+import java.util.Date;
+import java.util.Locale;
 
 public class Main {
+
+    static Date date = new Date();
+
+    static SimpleDateFormat ddMMyyyy = new SimpleDateFormat("dd.MM.yyyy");
+    static SimpleDateFormat yyyyMMdd = new SimpleDateFormat("yyyy-MM-dd");
+    static SimpleDateFormat EEEEdMMMMyyyy = new SimpleDateFormat("EEEE, d MMMM yyyy", new Locale("ru"));
+
+
     static void main(String[] args) {
-
-        ArrayList<Object> mixedList = new ArrayList<>() ;
-
-        ArrayList<Integer> list2 = new ArrayList<>();
-        list2.add(2);
-        System.out.println(list2);
-
-        ArrayList<String> name = new ArrayList<>();
-        name.add(0, "Nigger");
-        name.add(1, "Dasda");
-        name.remove(1);
-
-        System.out.println(name);
-
-        mixedList.addAll(name);
-        mixedList.addAll(list2);
-        System.out.println(mixedList);
-
-
-        String val = (String) mixedList.get(0);
-        System.out.println(val);
-
-        Integer val1 = (Integer) mixedList.get(2);
-        System.out.println(val1);
+        printCurrentDate();
     }
+
+    public static String[] printCurrentDate() {
+        return new String[]{
+                ddMMyyyy.format(date),
+                yyyyMMdd.format(date),
+                EEEEdMMMMyyyy.format(date)
+
+        };
+    }
+
 }
