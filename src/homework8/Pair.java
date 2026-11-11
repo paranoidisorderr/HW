@@ -1,4 +1,4 @@
-package homework7;
+package homework8;
 
 public class Pair<K, V> {
     private K key;

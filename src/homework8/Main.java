@@ -1,18 +1,13 @@
-package homework7;
+package homework8;
 
-import java.lang.classfile.constantpool.LoadableConstantEntry;
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
-import java.text.spi.DateFormatProvider;
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Main {
